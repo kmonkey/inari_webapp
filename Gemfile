@@ -42,12 +42,17 @@ gem 'rails_admin', '~> 1.2'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# Slim is a template language whose goal is reduce the syntax to the essential parts without becoming cryptic.
-gem 'slim', '~> 3.0', '>= 3.0.9'
+# Provides the generator settings required for Rails 3+ to use Slim
+gem 'slim-rails', '~> 3.1', '>= 3.1.3'
+# Provides common authentication needs such as signing in/out, activating by email and resetting password.
+gem 'sorcery', '~> 0.11.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
 end
 
 group :development do
